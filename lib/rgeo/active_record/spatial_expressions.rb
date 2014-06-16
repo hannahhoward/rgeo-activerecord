@@ -108,7 +108,7 @@ module RGeo
       end
 
       def st_azimuth(rhs_)
-        ::RGeo::ActiveRecord::SpatialNamedFunction.new('ST_Distance', [self, rhs_], [false, true, true])
+        ::RGeo::ActiveRecord::SpatialNamedFunction.new('ST_Azimuth', [self, rhs_], [false, true, true])
       end
 
       def st_intersection(rhs_)
