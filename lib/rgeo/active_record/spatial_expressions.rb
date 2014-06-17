@@ -87,6 +87,10 @@ module RGeo
         ::RGeo::ActiveRecord::SpatialNamedFunction.new('ST_Within', [self, rhs_], [false, true, true])
       end
 
+      def st_dwithin(rhs_, distance_)
+        ::RGeo::ActiveRecord::SpatialNamedFunction.new('ST_DWithin', [self, rhs_, distance_], [false, true, true, false])
+      end
+
       def st_contains(rhs_)
         ::RGeo::ActiveRecord::SpatialNamedFunction.new('ST_Contains', [self, rhs_], [false, true, true])
       end
